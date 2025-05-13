@@ -11,6 +11,37 @@
      <header class="bg-blue-300 p-2 flex items-center justify-center gap-4 text-black-500">
          <h1 class=" mt-10 text-3xl font-bold">Lab 1 -  Variables & Functions | Per Scholas</h1>
         </header>
+        <main class="grid grid-cols-4 grid-rows-4 gap-5 bg-gray-200 p-8 min-h-screen flex flex-col  font-sans">
+            <div class="bg-white p-6 shadow-md rounded mt-4 ">
+                   <h1 class="text-xl font-semibold">Dynamic String Manipulator</h1>
+                <input type="text" id="firstName" placeholder="Enter your firstname" class="border p-2 rounded">
+                <input type="text" id="lastName" placeholder="Enter your lastname" class="border p-2 rounded">
+               <button id="formatButton" class="flex bg-blue-500 text-white p-2 rounded hover:bg-blue-800 mt-4 ">Format Name</button>
+                <div id="result" class="mt-4 bg-gray-100 font-bold"></div>
+              </div>
+          <div class="bg-white p-4 shadow-md rounded mt-4">
+           <h1 class="text-xl font-semibold">Multi-Parameter Calculator</h1>
+                <input type="number" id="price" placeholder="Enter the price" class="border p-2 rounded">
+                  <input type="number" id="quantity" placeholder="Enter quantity" class="border p-2 rounded">
+              <input type="number" id="taxRate" placeholder="Enter third taxRate" class="border p-2 rounded">
+                  <input type="number" id="discount" placeholder="Enter discount" class="border p-2 rounded">
+                  <button id="calculateButton" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-800">Calculate</button>
+                 <div id="calculationResult" class="mt-4 bg-gray-100 font-bold"></div>
+           </div>
+           <div class ="bg-white p-4 shadow-md rounded mt-4">
+              <h1  class="text-xl font-semibold" >Modular-Math-Engine</h1>
+               <input type="number" id="age" placeholder="Enter your age" class="border p-2 rounded">
+             <div id="ageResult"></div>
+    
+               <select id="isEmployed" class="border p-2 rounded mt-4">
+            <option value="">Select Employment Status</option>
+            <option value="true">Employed</option>
+            <option value="false">Unemployed</option>
+               </select>
+                <button id="eligibilityButton" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-800 ">Check</button>
+            <div id="eligibilityResult"class="mt-4 bg-gray-100 font-bold"></div>
+              </div>
+   </main>
     <footer class="bg-blue-300 p-4 mt-auto flex items-center justify-center gap-4 text-black-500 ">
          <img src="mernify.jpg" alt="mernify" class="w-13 h-12 object-contain" />
         <div class="text-sm flex gap-2 text-center">
