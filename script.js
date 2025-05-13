@@ -45,4 +45,22 @@ calculatebutton.addEventListener("click", function(){
     let totalCost = calculateTotalCost(price, quantity, taxRate,discount)
     document.getElementById("calculationResult").innerText = `Total Cost: ${totalCost}`;
 });
+function checkEligibility(age,isEmployed){
+    if(age >= 18 && isEmployed){
+        return "You are eligible"
+} else if  (age >=18 && !isEmployed){
+        return "You are conditionally eligible."
+    } else{
+        return "Invalid input"
+    }
+}
+  let eligibilityButton = document.getElementById("eligibilityButton")
+eligibilityButton.addEventListener("click", function(){
+    let age = parseInt(document.getElementById("age").value)
+    let isEmployedValue = document.getElementById("isEmployed").value
+    let isEmployed = isEmployedValue === "true" || isEmployedValue === "yes";
+    let eligibility = checkEligibility(age,isEmployed)
+    document.getElementById("eligibilityResult").innerText = `Eligibility: ${eligibility}`;
+});
+
 
