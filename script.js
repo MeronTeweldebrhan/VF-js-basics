@@ -26,4 +26,23 @@ formatButton.addEventListener("click", function(){
     let fullName = formatFullName(firstName, lastName)
     document.getElementById("result").innerText = `Formatted Name: ${fullName}`;
 });
+function calculateTotalCost(price, quantity,taxRate,discount){
+    if(isNaN(price) || isNaN(quantity) || isNaN(taxRate)){
+         return "Invalid input"
+    } else if (Number(discount) > 0){
+        return ((price * quantity) * (1 + taxRate)) - discount
+    }else{
+        return (price * quantity) * (1 + taxRate)
+    }
+}
+
+let calculatebutton = document.getElementById("calculateButton")
+calculatebutton.addEventListener("click", function(){
+    let price = parseFloat(document.getElementById("price").value)
+    let quantity = parseInt(document.getElementById("quantity").value)
+    let taxRate = parseFloat(document.getElementById("taxRate").value)
+    let discount = parseFloat(document.getElementById("discount").value)
+    let totalCost = calculateTotalCost(price, quantity, taxRate,discount)
+    document.getElementById("calculationResult").innerText = `Total Cost: ${totalCost}`;
+});
 
